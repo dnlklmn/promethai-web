@@ -1,10 +1,14 @@
+import Benefits from "./components/Benefits";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import "./theme/typography.css";
 function App() {
   return (
     <>
-      <div className="flex items-center justify-between w-full px-16 py-3 text-white bg-primary">
-        <div>Logo</div>
-        <div>Menu</div>
-      </div>
+      <Header />
+      <Hero />
+      <Benefits />
+      <div className="h-[512px]">Features</div>
     </>
   );
 }
