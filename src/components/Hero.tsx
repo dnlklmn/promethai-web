@@ -5,7 +5,7 @@ export default function Hero() {
   const formRef = useRef(null);
 
   return (
-    <div className="flex items-center justify-center gap-20 w-full px-16 bg-white">
+    <div className="flex items-center justify-center gap-20 w-full px-16">
       <div className="w-1/3 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <span className="h3">At your service</span>

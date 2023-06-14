@@ -15,7 +15,7 @@ function Card({ title, description }: CardProps) {
 
 export default function Benefits() {
   return (
-    <div className="bg-gray-100 flex gap-12 justify-center px-32 py-12 pt-20">
+    <div className="bg-white grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 px-16 lg:px-32 py-16 ">
       <Card
         title="Flexible"
         description="Change your preferences to update the prompt, update the prompt to see preferences."

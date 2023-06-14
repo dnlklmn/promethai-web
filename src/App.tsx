@@ -1,4 +1,5 @@
 import Benefits from "./components/Benefits";
+import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import "./theme/typography.css";
@@ -8,7 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Benefits />
-      <div className="h-[512px]">Features</div>
+      <Features />
     </>
   );
 }
