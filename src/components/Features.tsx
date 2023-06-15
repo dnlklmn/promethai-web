@@ -2,11 +2,11 @@ import recipe from "../assets/recipe.png";
 
 function Feature({ title = "title", description = "description" }) {
   return (
-    <div className="w-full justify-center py-12 flex items-center gap-12">
-      <div className="w-1/2 flex items-center justify-center ">
+    <div className="flex items-center justify-center w-full gap-12 py-12">
+      <div className="flex items-center justify-center w-1/2 ">
         <img className="drop-shadow-img" src={recipe} alt="recipe" />
       </div>
-      <div className="w-full flex flex-col gap-8">
+      <div className="flex flex-col w-full gap-8">
         <div className="flex flex-col gap-2">
           <span className="h5">{title}</span>
           <span className="body-1">{description}</span>
@@ -18,7 +18,7 @@ function Feature({ title = "title", description = "description" }) {
 
 export default function Features() {
   return (
-    <div className=" px-16 lg:px-32 grid grid-cols-1 lg:grid-cols-2 gap-x-32">
+    <div className="grid grid-cols-1 px-16  lg:px-32 lg:grid-cols-2 gap-x-32">
       <Feature
         title="AI-Powered Personal Assistant"
         description="Receive personalized nutrition and productivity recommendations
