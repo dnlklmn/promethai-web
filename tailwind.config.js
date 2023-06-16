@@ -6,6 +6,23 @@ export default {
       colors: {
         primary: "#F87C97",
       },
+      fontFamily: {
+        sans: ["Inter"],
+        grotesk: "Space Grotesk",
+      },
+      fontSize: {
+        caption: "0.75rem",
+        body: "1rem",
+        "body-2": "0.875rem",
+        h2: "2.5rem",
+        h3: "2rem",
+        h4: "1.25rem",
+        h5: "1rem",
+      },
+      lineHeight: {
+        "body-2": "2rem",
+      },
+
       dropShadow: {
         img: "0 16px 32px rgba(0, 0, 0, 0.15)",
         "4xl": [

@@ -17,7 +17,7 @@ function Card({ title, description, children }: CardProps) {
       <div className="flex items-end w-16 h-16">{children}</div>
       <div className="flex flex-col w-full gap-2">
         <span className="h6">{title}</span>
-        <span className="body-2">{description}</span>
+        <span className="text-body-2">{description}</span>
       </div>
     </div>
   );
@@ -25,7 +25,7 @@ function Card({ title, description, children }: CardProps) {
 
 export default function Benefits() {
   return (
-    <div className="grid px-16 py-16 bg-white md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 lg:px-32 ">
+    <div className="grid grid-cols-2 px-16 py-16 bg-white lg:grid-cols-4 gap-x-12 gap-y-12 lg:px-32 ">
       <Card
         title="Flexible"
         description="Change your preferences to update the prompt, update the prompt to see preferences."

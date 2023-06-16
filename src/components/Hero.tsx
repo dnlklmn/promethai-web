@@ -34,34 +34,38 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full gap-20 px-16">
-      <div className="flex flex-col w-1/3 gap-8">
+    <div className="flex items-center justify-center w-full gap-6 pl-4 pr-2 sm:gap-12 md:gap-20 sm:px-8 md:px-24">
+      <div className="flex flex-col w-2/3 gap-8 lg:w-1/3">
         <div className="flex flex-col gap-2">
-          <span className="h3">At your service</span>
-          <span className="body-1">
+          <span className="text-h4 md:text-h3 lg:text-h2 font-grotesk">
+            At your service
+          </span>
+          <span className="text-body-2 md:text-body">
             Your personal assistant helps you decide your next meal, as well as
             how you’ll get it in your mouth.
           </span>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="body-1">Sign up for the private beta:</span>
+          <span className="text-body-2 md:text-body">
+            Sign up for the private beta:
+          </span>
           <form
             method="post"
-            className="flex flex-col h-12 gap-2"
+            className="flex flex-col h-12 gap-2 "
             ref={formRef}
             name="google-sheet"
             onSubmit={handleSubmit}
           >
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 h-fit md:flex-row">
               <input
                 onChange={(e) => setTimeout(() => validateEmail(e), 3000)}
                 name="email"
-                className="w-full border-[1px] border-gray-300 rounded-md px-3"
+                className="w-full border-[1px] border-gray-300 rounded-md px-3 py-2"
                 placeholder="Email"
               />
               <input
                 disabled={emailError}
-                className="px-6 py-3 text-white rounded-md cursor-pointer bg-primary whitespace-nowrap disabled:bg-primary/75"
+                className="px-3 py-2 text-white rounded-md cursor-pointer bg-primary whitespace-nowrap disabled:bg-primary/75"
                 type="submit"
                 value="Submit"
               />
@@ -74,7 +78,7 @@ export default function Hero() {
           </form>
         </div>
       </div>
-      <div className="w-[250px] h-[500px] flex items-center">
+      <div className="w-[250px] h-[360px] sm:h-[400px] md:h-[450px] lg:h-[500px] flex items-center">
         <img className="drop-shadow-img" src={recipe} alt="recipe" />
       </div>
     </div>
