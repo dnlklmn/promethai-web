@@ -1,14 +1,15 @@
 import recipe from "../assets/recipe.png";
 import { useRef } from "react";
 
-const scriptUrl =
-  "https://script.google.com/macros/s/AKfycbz6P_B-JC6dLDzYLjrrQxQB21rftb8cSKTldhJ9XL3qU-K2STVDFsP_8LKlsIgNxu3R/exec";
-
 export default function Hero() {
   const formRef = useRef(null);
 
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbyywII96jj7fQJfwLvXmFnFHk3ogWGNIM0_i--YrCPJySsmhCUdoGYWI9XDn5OFBgILww/exec";
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
+
     fetch(scriptUrl, {
       method: "POST",
       body: new FormData(formRef.current as unknown as HTMLFormElement),
