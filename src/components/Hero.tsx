@@ -1,8 +1,21 @@
 import recipe from "../assets/recipe.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import validator from "validator";
 
 export default function Hero() {
   const formRef = useRef(null);
+
+  const [emailError, setEmailError] = useState(false);
+
+  const validateEmail = (e: any) => {
+    var email = e.target.value;
+
+    if (validator.isEmail(email)) {
+      setEmailError(false);
+    } else {
+      setEmailError(true);
+    }
+  };
 
   const scriptUrl =
     "https://script.google.com/macros/s/AKfycbyywII96jj7fQJfwLvXmFnFHk3ogWGNIM0_i--YrCPJySsmhCUdoGYWI9XDn5OFBgILww/exec";
@@ -34,24 +47,34 @@ export default function Hero() {
           <span className="body-1">Sign up for the private beta:</span>
           <form
             method="post"
-            className="flex gap-2"
+            className="flex flex-col h-12 gap-2"
             ref={formRef}
             name="google-sheet"
             onSubmit={handleSubmit}
           >
-            <input
-              className="w-full border-[1px] border-gray-300 rounded-md px-3"
-              placeholder="Email"
-            />
-            <input
-              className="px-6 py-3 text-white rounded-md cursor-pointer bg-primary whitespace-nowrap"
-              type="submit"
-              value="Submit"
-            />
+            <div className="flex gap-2">
+              <input
+                onChange={(e) => setTimeout(() => validateEmail(e), 3000)}
+                name="email"
+                className="w-full border-[1px] border-gray-300 rounded-md px-3"
+                placeholder="Email"
+              />
+              <input
+                disabled={emailError}
+                className="px-6 py-3 text-white rounded-md cursor-pointer bg-primary whitespace-nowrap disabled:bg-primary/75"
+                type="submit"
+                value="Submit"
+              />
+            </div>
+            {emailError && (
+              <span className="text-sm text-red-500">
+                Please provide a valid email
+              </span>
+            )}
           </form>
         </div>
       </div>
-      <div className="w-[250px] h-[480px] flex items-center justify-center ">
+      <div className="w-[250px] h-[500px] flex items-center">
         <img className="drop-shadow-img" src={recipe} alt="recipe" />
       </div>
     </div>
