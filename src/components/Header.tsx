@@ -1,5 +1,3 @@
-import { MenuIcon } from "../assets/Icons";
-
 export default function Header() {
   return (
     <div className="sticky flex items-center justify-between w-full px-4 py-8 bg-white h-fit md:px-16 lg:px-32 text-primary">
