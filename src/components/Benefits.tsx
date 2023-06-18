@@ -25,7 +25,7 @@ function Card({ title, description, children }: CardProps) {
 
 export default function Benefits() {
   return (
-    <div className="grid grid-cols-2 px-16 py-16 bg-white lg:grid-cols-4 gap-x-12 gap-y-12 lg:px-32 ">
+    <div className="grid grid-cols-2 px-6 py-8 md:py-12 lg:py-16 md:px-16 lg:grid-cols-4 gap-x-6 lg:gap-x-12 gap-y-8 lg:gap-y-12 lg:px-12 xl:px-32 ">
       <Card
         title="Flexible"
         description="Change your preferences to update the prompt, update the prompt to see preferences."
