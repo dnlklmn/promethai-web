@@ -71,7 +71,7 @@ export default function Hero() {
               />
             </div>
             {emailError && (
-              <span className="text-sm text-red-500">
+              <span className="h-0 text-sm text-red-500">
                 Please provide a valid email
               </span>
             )}
